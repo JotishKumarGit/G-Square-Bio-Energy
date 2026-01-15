@@ -77,8 +77,8 @@
     </style>
 
     <!-- Top Bar -->
-    <section class="container top"> <a href="index.html" class="navbar-brand"><img src="images/newaaj-logo.png"
-          alt="G-Square Bio Energy"></a>
+    <section class="container top"> <a href="index.html" class="navbar-brand"><img src="images/g_logo.jpeg"
+          alt="G-Square Bio Energy" height="200px" width="100%"></a>
       <div class="right_tc ">
         <p><i class="fa fa-phone phone"></i> <a href="tel:+919449045440">9449045440</a> / <a
             href="tel:+919371444466">9371444466</a></p>
@@ -128,8 +128,7 @@
       <div class="carousel-inner" role="listbox">
         <div class="item active"><img src="images/slider/06.jpg" width="100%" style="height: 800px !important;" alt="">
         </div>
-        <div class="item"><img src="images/slider/02.jpg" width="100%" style="height: 800px !important;" alt=""> </div>
-        <div class="item"><img src="images/slider/03.jpg" width="100%" style="height: 800px !important;" alt=""> </div>
+
         <div class="item"><img src="images/slider/04.jpg" width="100%" style="height: 800px !important;" alt=""> </div>
         <div class="item"><img src="images/briquettes.jpg" width="100%" style="height: 800px !important;" alt=""> </div>
       </div>
@@ -186,7 +185,8 @@
                 <span><i class="fa fa-check"></i> Low Moisture</span>
                 <span><i class="fa fa-check"></i> Consistent Quality</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn btn-success mt10">Enquiry
+                Now</a>
             </div>
           </div>
         </div>
@@ -211,33 +211,6 @@
                 <span><i class="fa fa-check"></i> Renewable Energy</span>
                 <span><i class="fa fa-check"></i> Pilot Scale Testing</span>
                 <span><i class="fa fa-check"></i> Eco-Friendly Solution</span>
-              </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Industrial Alum -->
-        <div class="col-md-4 col-sm-6 col-xs-12 d-flex">
-          <div class="product-card trans_eff h-100">
-            <figure class="product-img">
-              <img src="images/Alum.jpg" alt="Industrial Alum" class="img-responsive">
-              <div class="product-overlay">
-                <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
-                </div>
-              </div>
-            </figure>
-            <div class="product-info">
-              <h3>Industrial Alum</h3>
-              <p>
-                High-purity alum used in water purification, textile dyeing,
-                paper processing, and chemical industries.
-              </p>
-              <div class="product-features">
-                <span><i class="fa fa-check"></i> High Purity</span>
-                <span><i class="fa fa-check"></i> Water Treatment</span>
-                <span><i class="fa fa-check"></i> Industrial Grade</span>
               </div>
               <a href="#" class="btn btn-success mt10">Enquiry Now</a>
             </div>
@@ -538,7 +511,7 @@
         <div class="col-md-6">
           <div class="contact_form">
             <h3 class="ttu">Send Us a Message</h3>
-            <form class="mt20">
+            <form class="mt20" id="whatsappForm">
               <div class="form-group">
                 <input type="text" class="form-control" placeholder="Your Name *" required>
               </div>
@@ -634,10 +607,110 @@
   <p id="back-top"> <a href="#top" class="btn btn-success trans_eff"><i class="fa fa-angle-up"></i></a></p>
   <!-- FOOTER ENDS -->
 
+
+ 
+  <!-- Modal -->
+  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="whatsappFormModal">
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Your Name *" required>
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" placeholder="Your Email *" required>
+            </div>
+            <div class="mb-3">
+              <input type="tel" class="form-control" placeholder="Your Phone Number">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" placeholder="Subject">
+            </div>
+            <div class="mb-3">
+              <textarea class="form-control" rows="4" placeholder="Your Message *" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Send via WhatsApp</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="Scripts/jquery-1.11.3.min.js"></script>
   <script src="Scripts/bootstrap.min.js"></script>
   <script src="Scripts/helpers.min.js"></script>
   <script src="Scripts/function.js"></script>
+
+  <!-- whatsapp messeging -->
+  <script>
+    document.getElementById("whatsappForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      // Form values
+      let name = document.querySelector('input[placeholder="Your Name *"]').value;
+      let email = document.querySelector('input[placeholder="Your Email *"]').value;
+      let phone = document.querySelector('input[placeholder="Your Phone Number"]').value;
+      let subject = document.querySelector('input[placeholder="Subject"]').value;
+      let message = document.querySelector('textarea').value;
+
+      // WhatsApp number (country code ke sath)
+      let whatsappNumber = "919449045440"; // <-- apna number yahan daalein
+
+      let whatsappMessage =
+        `*New Contact Form Message*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Subject:* ${subject}%0A` +
+        `*Message:* ${message}`;
+
+      let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+      window.open(whatsappURL, "_blank");
+    });
+  </script>
+
+  <!-- enquiry modal -->
+  <script>
+    document.getElementById("whatsappFormModal").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      let name = this.querySelector('input[placeholder="Your Name *"]').value;
+      let email = this.querySelector('input[placeholder="Your Email *"]').value;
+      let phone = this.querySelector('input[placeholder="Your Phone Number"]').value;
+      let subject = this.querySelector('input[placeholder="Subject"]').value;
+      let message = this.querySelector('textarea').value;
+
+      let whatsappNumber = "919449045440"; // <-- apna number yahan daalein
+
+      let whatsappMessage =
+        `*New Enquiry Form Message*%0A%0A` +
+        `*Name:* ${name}%0A` +
+        `*Email:* ${email}%0A` +
+        `*Phone:* ${phone}%0A` +
+        `*Subject:* ${subject}%0A` +
+        `*Message:* ${message}`;
+
+      let whatsappURL = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+      window.open(whatsappURL, "_blank");
+
+      // Close modal after submit using Bootstrap method
+      let modalEl = document.getElementById('enquiryModal');
+      let modal = bootstrap.Modal.getInstance(modalEl);
+      modal.hide();
+
+      // Reset form
+      this.reset();
+    });
+  </script>
+
+
 </body>
 
 </html>
