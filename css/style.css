@@ -4199,3 +4199,228 @@ a.uu:hover {
 		padding: 40px 0;
 	}
 }
+
+
+/* CSS Modal */
+
+/* Modal Background */
+.modal {
+	display: none;
+	/* Hidden by default */
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0, 0, 0, 0.6);
+	/* Semi-transparent background */
+	transition: 0.3s;
+	z-index: 9999;
+}
+
+/* Modal Content */
+.modal-content {
+	background-color: #fff;
+	margin: 10% auto;
+	padding: 20px;
+	border-radius: 8px;
+	width: 90%;
+	max-width: 500px;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+	from {
+		transform: translateY(-50px);
+		opacity: 0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+
+/* Close Button */
+.close-btn {
+	float: right;
+	font-size: 1.2rem;
+	font-weight: bold;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+/* Form Inputs */
+.modal-form input,
+.modal-form textarea,
+.modal-form button {
+	width: 100%;
+	margin-bottom: 15px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+	font-size: 1rem;
+}
+
+.modal-form button {
+	background-color: #28a745;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.modal-form button:hover {
+	background-color: #218838;
+}
+
+
+/* bread crumb */
+/* Breadcrumb container with background and overlay */
+.breadcrumb-container { 
+	position: relative;
+	width: 100%;
+	height: 300px;
+	/* height of the breadcrumb section */
+	background-image: url('../images/Briquettes.jpeg');
+	background-size: cover;
+	background-position: center;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	/* center horizontally */
+	align-items: center;
+	/* center vertically */
+}
+
+.breadcrumb-container::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.8);
+	/* dark overlay for readability */
+	border-radius: 5px;
+	z-index: 0;
+}
+
+.breadcrumb {
+	display: flex;
+	list-style: none;
+	padding: 0 20px;
+	color: #fff;
+	z-index: 1;
+	/* above overlay */
+	flex-wrap: wrap;
+	font-weight: bold;
+}
+
+.breadcrumb li {
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+}
+
+.breadcrumb li a {
+	text-decoration: none;
+	color: #fff;
+	transition: color 0.3s;
+}
+
+.breadcrumb li a:hover {
+	color: #ffd700;
+}
+
+/* Separator */
+.breadcrumb li+li::before {
+	content: ">";
+	margin: 0 10px;
+	color: #fff;
+}
+
+/* Current page */
+.breadcrumb li.active a {
+	color: #ffd700;
+	pointer-events: none;
+	cursor: default;
+}
+/* css for products details */
+/* Imported Coal Section */
+.imported-coal-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+}
+
+.imported-coal-card {
+    display: flex;
+    max-width: 1000px;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    gap: 0; /* space between image and details handled by flex */
+}
+
+.imported-coal-image img {
+    width: 500px;
+    height: auto;
+    object-fit: cover;
+}
+
+.imported-coal-details {
+    padding: 30px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imported-coal-details h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.imported-coal-details p {
+    margin: 6px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.imported-coal-btn {
+    margin-top: 20px;
+    padding: 12px 30px;
+    background-color: #ff6f00;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    width: fit-content;
+    transition: background 0.3s;
+}
+
+.imported-coal-btn:hover {
+    background-color: #e65c00;
+}
+
+/* Responsive for Mobile */
+@media screen and (max-width: 768px) {
+    .imported-coal-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    .imported-coal-image img {
+        width: 100%;
+        height: auto;
+    }
+    .imported-coal-details {
+        padding: 20px;
+    }
+}

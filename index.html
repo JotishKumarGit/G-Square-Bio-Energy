@@ -50,34 +50,7 @@
 </head>
 
 <body id="home">
-
   <header>
-
-    <style>
-      /* MINIMAL STICKY HEADER */
-      header {
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-        background: white;
-        z-index: 100;
-      }
-
-      /* Mobile slider visibility fix */
-      @media (max-width: 768px) {
-        .slider_con {
-          position: relative !important;
-          z-index: 1 !important;
-          margin-top: 0 !important;
-        }
-
-        .carousel-inner {
-          position: relative !important;
-          z-index: 1 !important;
-        }
-      }
-    </style>
-
     <!-- Top Bar -->
     <div class="container-fluid " style="background-color: #fff;">
       <section class="container top">
@@ -108,10 +81,10 @@
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
             <li><a href="index.html" class="home">Home</a></li>
-            <li><a href="#" class="about-us">About Us</a></li>
-            <li><a href="#" class="plans">Products</a></li>
-            <li><a href="#" class="enterprise">Product Gallery</a></li>
-            <li><a href="#" class="contact-us">Contact Us</a></li>
+            <li><a href="about.html" class="about-us">About Us</a></li>
+            <li><a href="products.html" class="plans">Products</a></li>
+            <li><a href="gallery.html" class="enterprise">Product Gallery</a></li>
+            <li><a href="contact.html" class="contact-us">Contact Us</a></li>
           </ul>
           <div class="social_midea_con hidden-xs hidden-sm"> <a href="#" class="trans_eff" title="Facebbok"><i
                 class="fa fa-facebook"></i></a> <a href="#" class="trans_eff" title="Twitter"><i
@@ -124,6 +97,7 @@
       </nav>
     </section>
   </header>
+  <!-- end header -->
 
   <!--BANNER STARTS -->
   <div class="slider_con">
@@ -146,7 +120,7 @@
   </div>
   <!-- BANNER ENDS -->
 
-  <!-- WELCOME STARTS -->
+  <!-- About STARTS -->
   <section class="container">
     <div class="welcome_con ac">
       <h1 class="ttu title1">G-Square Bio Energy</h1>
@@ -161,7 +135,7 @@
       <div class="ac mt30"> <a href="#" class="btn btn-success trans_eff">Read More</a> </div>
     </div>
   </section> <br>
-  <!-- WELCOME ENDS -->
+  <!-- About ENDS -->
 
   <!-- OUR PRODUCTS STARTS -->
   <section class="products_con">
@@ -180,7 +154,7 @@
               <img src="images/Imported-coal.jpeg" alt="Imported Coal" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="Imported-Coal.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -195,8 +169,8 @@
                 <span><i class="fa fa-check"></i> Low Moisture</span>
                 <span><i class="fa fa-check"></i> Consistent Quality</span>
               </div>
-              <a href="#" data-bs-toggle="modal" data-bs-target="#enquiryModal" class="btn btn-success mt10">Enquiry
-                Now</a>
+              <button onclick="openModal()" class="btn btn-success mt10">Enquiry
+                Now</button>
             </div>
           </div>
         </div>
@@ -208,7 +182,7 @@
               <img src="images/Briquettes.jpeg" alt="Fuel Briquettes" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="Fuel-Briquettes.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -223,7 +197,7 @@
                 <span><i class="fa fa-check"></i> Low Ash</span>
                 <span><i class="fa fa-check"></i> Cost Effective</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" onclick="openModal()" class="btn btn-success mt10">Enquiry Now</a>
             </div>
           </div>
         </div>
@@ -235,7 +209,7 @@
               <img src="images/slider/04.jpg" alt="Biomass Pilot Plant" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="Biomass-Pilot.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -250,7 +224,7 @@
                 <span><i class="fa fa-check"></i> Pilot Scale Testing</span>
                 <span><i class="fa fa-check"></i> Eco-Friendly Solution</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" onclick="openModal()" class="btn btn-success mt10">Enquiry Now</a>
             </div>
           </div>
         </div>
@@ -262,7 +236,7 @@
               <img src="images/Indian-Coal.jpg" alt="Indian Coal" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="Indian-Coal.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -277,7 +251,7 @@
                 <span><i class="fa fa-check"></i> Steady Combustion</span>
                 <span><i class="fa fa-check"></i> Industrial Use</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" onclick="openModal()" class="btn btn-success mt10">Enquiry Now</a>
             </div>
           </div>
         </div>
@@ -289,7 +263,7 @@
               <img src="images/US-Coal.jpeg" alt="US Coal" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="US-Coal.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -304,7 +278,7 @@
                 <span><i class="fa fa-check"></i> High Efficiency</span>
                 <span><i class="fa fa-check"></i> Premium Quality</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" onclick="openModal()" class="btn btn-success mt10">Enquiry Now</a>
             </div>
           </div>
         </div>
@@ -316,7 +290,7 @@
               <img src="images/South-Indian-coal.jpg" alt="South Indian Coal" class="img-responsive">
               <div class="product-overlay">
                 <div class="overlay-content">
-                  <a href="#" class="btn btn-success">View Details</a>
+                  <a href="South-African-Coal.html" class="btn btn-success">View Details</a>
                 </div>
               </div>
             </figure>
@@ -331,7 +305,7 @@
                 <span><i class="fa fa-check"></i> Easy Availability</span>
                 <span><i class="fa fa-check"></i> Industrial Grade</span>
               </div>
-              <a href="#" class="btn btn-success mt10">Enquiry Now</a>
+              <a href="#" onclick="openModal()" class="btn btn-success mt10">Enquiry Now</a>
             </div>
           </div>
         </div>
@@ -440,7 +414,7 @@
       </ul>
     </div>
   </section>
-  <!-- PRESENCE ENDS -->
+  <!-- Clients ENDS -->
 
   <!-- CONTACT US STARTS -->
   <section class="contact_us_con mt40">
@@ -593,38 +567,44 @@
   <p id="back-top"> <a href="#top" class="btn btn-success trans_eff"><i class="fa fa-angle-up"></i></a></p>
   <!-- FOOTER ENDS -->
 
-  <!-- Modal -->
-  <div class="modal fade" id="enquiryModal" tabindex="-1" aria-labelledby="enquiryModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="enquiryModalLabel">Enquiry Form</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form id="whatsappFormModal">
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name *" required>
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="Your Email *" required>
-            </div>
-            <div class="mb-3">
-              <input type="tel" class="form-control" placeholder="Your Phone Number">
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject">
-            </div>
-            <div class="mb-3">
-              <textarea class="form-control" rows="4" placeholder="Your Message *" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Send via WhatsApp</button>
-          </form>
-        </div>
-      </div>
+  <!-- HTML Modal -->
+  <div id="enquiryModal" class="modal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">×</button>
+      <h2>Enquiry Form</h2>
+      <form id="whatsappFormModal" class="modal-form">
+        <input type="text" placeholder="Your Name *" required>
+        <input type="email" placeholder="Your Email *" required>
+        <input type="tel" placeholder="Your Phone Number">
+        <input type="text" placeholder="Subject">
+        <textarea rows="4" placeholder="Your Message *" required></textarea>
+        <button type="submit">Send via WhatsApp</button>
+      </form>
     </div>
   </div>
+  <!-- JS for Modal -->
+  <script>
+    const modal = document.getElementById('enquiryModal');
 
+    function openModal() {
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      modal.style.display = 'none';
+    }
+
+    // Close modal when clicking outside content
+    window.onclick = function (event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
   <script src="Scripts/jquery-1.11.3.min.js"></script>
   <script src="Scripts/bootstrap.min.js"></script>
   <script src="Scripts/helpers.min.js"></script>
